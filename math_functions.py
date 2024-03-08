@@ -68,7 +68,7 @@ def lrArray(epochs, initial_lr, decay_rate):
     return lr
 
 
-# Implement input normalization algorithm @ HW11
+# Implement input normalization algorithm @ HW10
 def normalize_input(input_tensor: torch.Tensor) -> torch.Tensor:
     # 计算输入张量的均值和标准差
     mean = torch.mean(input_tensor)

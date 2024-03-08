@@ -191,7 +191,9 @@ class Model:
             self.layers.append(Layer(neuron_number_list[i + 1], neuron_number_list[i], activation, dropout=dropout))
 
     def workLine(self, x: torch.Tensor, true_labels: torch.Tensor, test: bool = False):
-        # Implement input normalization algorithm @ HW11
+
+        # Implement input normalization algorithm @ HW10
+
         x = mf.normalize_input(x)
         y_true = torch.tensor(one_hot_encode(np.array(true_labels), arg.num_classes))
         loss, y_pred = self.forward(x, y_true, test=test)
